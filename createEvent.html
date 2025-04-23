@@ -7,189 +7,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #4F46E5;
-            --secondary-color: #6366F1;
-            --accent-color: #C7D2FE;
-            --background-color: #F8FAFC;
-            --text-primary: #1E293B;
-            --text-secondary: #64748B;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #F8FAFC 0%, #EEF2FF 100%);
-            min-height: 100vh;
-        }
-
-        .navbar {
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-        }
-
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--primary-color) !important;
-        }
-
-        .nav-link {
-            color: var(--text-primary) !important;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--primary-color) !important;
-        }
-
-        .container {
-            max-width: 1000px;
-        }
-
-        h2 {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .form-section {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .form-section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-
-        .form-section h4 {
-            color: var(--text-primary);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .form-label {
-            color: var(--text-secondary);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        .form-control {
-            padding: 0.8rem 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .form-control:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-        }
-
-        .form-select {
-            padding: 0.8rem 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .form-select:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-        }
-
-        .form-check-input:checked {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-
-        .btn {
-            padding: 0.8rem 1.5rem;
-            border-radius: 10px;
-            font-weight: 500;
-            letter-spacing: 0.3px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background: var(--primary-color);
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
-        }
-
-        .btn-secondary {
-            background: #fff;
-            color: var(--text-primary);
-            border: 2px solid #e2e8f0;
-        }
-
-        .btn-secondary:hover {
-            background: #f8fafc;
-            border-color: var(--primary-color);
-            color: var(--primary-color);
-            transform: translateY(-2px);
-        }
-
-        .preview-image {
-            max-width: 200px;
-            max-height: 200px;
-            margin-top: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .preview-image:hover {
-            transform: scale(1.05);
-        }
-
-        .footer {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            color: var(--text-secondary);
-        }
-
-        .footer h5 {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
         <div class="container">
             <a class="navbar-brand" href="index.html">EventPro</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Create Event</a></li>
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="smart-ticketing.html">Tickets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="analytics.html">Analytics</a></li>
+                    <li class="nav-item"><a class="nav-link active ms-2" href="createEvent.html">Create Event</a></li>
+                    <li class="nav-item"><a class="nav-link ms-2" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link ms-2" href="signup.html">Sign Up</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Create Event Form -->
-    <div class="container py-5">
+    <div class="container py-5 mt-5">
         <h2 class="text-center mb-4">Create New Event</h2>
         <form id="eventForm" class="needs-validation" novalidate>
             <!-- Basic Information -->
@@ -256,7 +98,7 @@
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Event Type*</label>
-                        <select class="form-select" required>
+                        <select name="eventType" class="form-select" required>
                             <option value="">Choose...</option>
                             <option>Conference</option>
                             <option>Workshop</option>
@@ -268,14 +110,13 @@
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Category*</label>
-                        <select class="form-select" required>
+                        <select name="category" class="form-select" required>
                             <option value="">Choose...</option>
-                            <option>Business</option>
-                            <option>Technology</option>
-                            <option>Entertainment</option>
-                            <option>Education</option>
-                            <option>Arts & Culture</option>
-                            <option>Other</option>
+                            <option value="Business">Business</option>
+                            <option value="Tech">Technology</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Music">Music</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                 </div>
@@ -287,18 +128,18 @@
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label class="form-label">Ticket Type*</label>
-                        <select class="form-select" required>
+                        <select name="ticketType" class="form-select" required>
                             <option value="">Choose...</option>
-                            <option>Free</option>
-                            <option>Paid</option>
-                            <option>Donation</option>
+                            <option value="free">Free</option>
+                            <option value="paid">Paid</option>
+                            <option value="donation">Donation</option>
                         </select>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Price (if paid)*</label>
                         <div class="input-group">
                             <span class="input-group-text">$</span>
-                            <input type="number" class="form-control" min="0" step="0.01">
+                            <input type="number" name="price" class="form-control" min="0" step="0.01">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -307,7 +148,7 @@
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Maximum Tickets per Person</label>
-                        <input type="number" class="form-control" min="1">
+                        <input type="number" name="maxTicketsPerPerson" class="form-control" min="1">
                     </div>
                 </div>
             </div>
@@ -351,16 +192,28 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer py-4 mt-5">
+    <footer class="bg-dark text-white py-4">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-4">
                     <h5>EventPro</h5>
-                    <p>Your complete event management solution. Create, manage, and analyze events with ease.</p>
+                    <p>Your complete event management solution</p>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <h5>Need Help?</h5>
-                    <p>Our support team is here to assist you 24/7. <a href="contact.html">Contact us</a></p>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">About Us</a></li>
+                        <li><a href="terms-privacy.html" class="text-white">Terms & Conditions</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -368,34 +221,85 @@
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/events.js"></script>
     <script>
-        // Form validation
-        (function () {
-            'use strict'
-            var forms = document.querySelectorAll('.needs-validation')
-            Array.prototype.slice.call(forms).forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-                    form.classList.add('was-validated')
-                }, false)
-            })
-        })()
-
-        // Image preview
-        document.querySelector('input[type="file"]').addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const preview = document.getElementById('imagePreview');
-                    preview.innerHTML = `<img src="${e.target.result}" class="preview-image">`;
+        document.addEventListener("DOMContentLoaded", function () {
+            const eventForm = document.getElementById("eventForm");
+            
+            // Create Event button functionality
+            eventForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                if (!eventForm.checkValidity()) {
+                    eventForm.classList.add('was-validated');
+                    return;
                 }
-                reader.readAsDataURL(file);
-            }
+
+                const formData = new FormData(eventForm);
+                const newEvent = {
+                    eventName: formData.get('eventName'),
+                    startDate: formData.get('startDate'),
+                    endDate: formData.get('endDate'),
+                    startTime: formData.get('startTime'),
+                    endTime: formData.get('endTime'),
+                    venueName: formData.get('venueName'),
+                    address: formData.get('address'),
+                    city: formData.get('city'),
+                    state: formData.get('state'),
+                    description: formData.get('description'),
+                    category: formData.get('category'),
+                    ticketType: formData.get('ticketType'),
+                    price: formData.get('price'),
+                    totalTickets: formData.get('totalTickets'),
+                    maxTicketsPerPerson: formData.get('maxTicketsPerPerson'),
+                    isVirtual: document.getElementById('virtualEvent').checked,
+                    isPrivate: document.getElementById('privateEvent').checked
+                };
+
+                // Get the file input
+                const fileInput = document.querySelector('input[type="file"]');
+                if (fileInput && fileInput.files[0]) {
+                    const reader = new FileReader();
+                    reader.onloadend = function () {
+                        newEvent.bannerImage = reader.result;
+                        saveEvent(newEvent); // This will use the saveEvent from events.js
+                    };
+                    reader.readAsDataURL(fileInput.files[0]);
+                } else {
+                    saveEvent(newEvent); // This will use the saveEvent from events.js
+                }
+            });
+    
+            // Bootstrap form validation
+            (function () {
+                'use strict'
+                const forms = document.querySelectorAll('.needs-validation')
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+            })()
+    
+            // Image preview functionality
+            document.querySelector('input[type="file"]').addEventListener('change', function (e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const preview = document.getElementById('imagePreview');
+                        preview.innerHTML = `<img src="${e.target.result}" class="preview-image">`;
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    document.getElementById('imagePreview').innerHTML = '';
+                }
+            });
         });
     </script>
 </body>
